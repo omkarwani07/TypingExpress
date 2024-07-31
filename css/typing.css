@@ -1,0 +1,274 @@
+@font-face {
+    font-family: 'Trebuchet MS';
+    src: url('../fonts/trebuc.ttf');
+}
+
+@font-face {
+    font-family: 'Proxima';
+    src: url('../fonts/Proxima-regular.otf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.container{
+    background-image: url('../images/typing-image-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#web-logo{
+    width: 18rem;
+    height: 3rem;
+}
+
+#hamburger-icon{
+    display: none;
+    width: 20px;
+    height: 20px;
+}
+
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1b1b2066;
+    width: 100%;
+    max-height: 20vh;
+    padding: 15px 30px;
+    box-sizing: border-box;
+}
+
+nav ul{
+    display: flex;
+}
+nav ul li{
+    font-family: 'Proxima';
+    font-size: 1.1rem;
+    color: white;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+.nav_link{
+    display: inline-block;
+    position: relative;
+    color: white;
+  }
+  
+.nav_link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.nav_link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.typing-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.3rem;
+}
+
+#typing-area{
+    font-family: 'Proxima';
+    /* font-weight: bold; */
+    font-size: 22px;
+    padding: 10px;
+    width: 45vw;
+    height: 50vh;
+    background-color: #1b1b2066;
+    color: white;
+    overflow: auto;
+}
+
+.input-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+#user-input{
+    font-family: 'Proxima';
+    width: 45vw;
+    height: 35px;
+    font-size: 18px;
+    padding: 20px;
+    color: #ab92ff;
+    background-color: #1b1b20c2;
+}
+
+.keyboard-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.keyboard-area{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 45vw;
+    height: 30vh;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.timer-div{
+    color: #bdeebd;
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10px;
+    margin-right: 40px;
+}
+
+.keyboard-area span{
+    border: 1px solid black;
+    padding: 5px;
+    margin: 0 2px;
+    font-size: 25px;
+    border-radius: 4px;
+}
+.f69ec5 span{
+    background-color: #f69ec5;
+}
+
+.feef7e span{
+    background-color: #feef7e;
+}
+
+.a7e2a9 span{
+    background-color: #a7e2a9;
+}
+
+/* Nav Bar Responsive */
+@media screen and (max-width: 687px) {
+    nav ul li{
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 559px) {
+    nav ul li{
+        display: block;
+        margin: 50px auto;
+    }
+    #web-logo{
+        width: 50vw;
+        height: 10vw;
+    }
+
+    #hamburger-icon{
+        display: block;
+        width: 8vw;
+        height: 5vw;
+    }
+
+    nav ul{
+        /* display: flex; */
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 110px;
+        background-color: #1b1b2066;
+        top: 60px;
+        left: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 298px) {
+    nav ul li{
+        display: block;
+        margin: 50px auto;
+    }
+    #web-logo{
+        width: 50vw;
+        height: 10vw;
+    }
+
+    #hamburger-icon{
+        display: block;
+        width: 8vw;
+        height: 5vw;
+    }
+
+    nav ul{
+        /* display: flex; */
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 120px;
+        background-color: #1b1b2066;
+        top: 40px;
+        left: 0;
+        text-align: center;
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  /* Black Gradient */
+.gradient {
+    width: 100%;
+    height: 100vh;
+    background-size: contain;
+    background-position: center;
+    background: rgb(19, 11, 10);
+    background: linear-gradient(0deg, transparent 50%, rgba(0, 0, 0, .7)), radial-gradient(50% 100%, transparent 0, rgba(0, 0, 0, .7) 100%);
+}
+
+@media screen and (max-width: 749px) {
+    #typing-area{
+        width: 80vw;
+        height: 40vh;
+    }
+    #user-input{
+        width: 80vw;
+    }
+}
